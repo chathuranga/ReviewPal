@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="ee7f04d0-2831-48bb-9053-a2e8df3acb4b">
+    <Name>ReviewPal 2012</Name>
+    <Author>Chathuranga K. Wijeratna</Author>
+    <Version>1.2</Version>
+    <Description xml:space="preserve">ReviewPal - .Net code review companion.</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>http://reviewpal.codeplex.com/</MoreInfoUrl>
+    <GettingStartedGuide>http://reviewpal.codeplex.com/documentation</GettingStartedGuide>
+    <Icon>page_red.png</Icon>
+    <PreviewImage>Preview.jpg</PreviewImage>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+         <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="2.0" MaxVersion="4.5" />
+  </Identifier>
+  <References>
+    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+      <Name>Visual Studio MPF</Name>
+    </Reference>
+  </References>
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+  </Content>
+</Vsix>

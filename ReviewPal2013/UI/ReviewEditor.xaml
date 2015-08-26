@@ -1,0 +1,67 @@
+﻿<Window x:Class="ReviewPal.ReviewPal2012.UI.ReviewEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Review Editor" Height="526" Width="735" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <GroupBox Header="Review ID : " Height="492" HorizontalAlignment="Left" Margin="0,1,0,0" Name="grpReview" VerticalAlignment="Top" Width="709">
+            <Grid>
+                <Label Content="Comments :" Height="28" HorizontalAlignment="Left" Margin="6,11,0,0" Name="label1" VerticalAlignment="Top" IsEnabled="False" Width="94" HorizontalContentAlignment="Right" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="100,16,0,0" Name="cmbComment" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+                    <ComboBoxItem Content="Suggestion" />
+                    <ComboBoxItem Content="Error" />
+                </ComboBox>
+                <Label Content="Defect Type :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="246,16,0,0" Name="label2" VerticalAlignment="Top" Width="79" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="327,16,0,0" Name="cmbDefectType" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+                    <ComboBoxItem Content="Best Practice"/>
+                    <ComboBoxItem Content="Logical" />
+                    <ComboBoxItem Content="Incomplete" />
+                    <ComboBoxItem Content="UI" />
+                    <ComboBoxItem Content="Exception Handling" />
+                    <ComboBoxItem Content="Documentation" />
+                </ComboBox>
+                <Label Content="Injected Phase :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="6,45,0,0" Name="label3" VerticalAlignment="Top" Width="94" />
+                <Label Content="Status :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="470,16,0,0" Name="label4" VerticalAlignment="Top" Width="79" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="551,16,0,0" Name="cmbStatus" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+                    <ComboBoxItem Content="Open" />
+                    <ComboBoxItem Content="On hold" />
+                    <ComboBoxItem Content="Closed" />
+                    <ComboBoxItem Content="Rejected" />
+                </ComboBox>
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="100,47,0,0" Name="cmbInjectedPhase" VerticalAlignment="Top" Width="120" SelectedIndex="4">
+                    <ComboBoxItem Content="Initial Project Setup" />
+                    <ComboBoxItem Content="Project Initiation" />
+                    <ComboBoxItem Content="Requirements Analysis" />
+                    <ComboBoxItem Content="Architecture and Design" />
+                    <ComboBoxItem Content="Implementation" />
+                    <ComboBoxItem Content="QA testing" />
+                    <ComboBoxItem Content="Transition Phase" />
+                </ComboBox>
+                <Label Content="Severity :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="233,45,0,0" Name="label5" VerticalAlignment="Top" Width="94" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="327,47,0,0" Name="cmbSeverity" VerticalAlignment="Top" Width="120" SelectedIndex="2">
+                    <ComboBoxItem Content="Major" />
+                    <ComboBoxItem Content="Medium" />
+                    <ComboBoxItem Content="Minor" />
+                </ComboBox>
+                <Label Content="Re-Examined :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="457,45,0,0" Name="label6" VerticalAlignment="Top" Width="94" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="551,47,0,0" Name="cmbReExamined" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+                    <ComboBoxItem Content="No" />
+                    <ComboBoxItem Content="Yes" />
+                </ComboBox>
+                <Label Content="Description :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="6,156,0,0" Name="label7" VerticalAlignment="Top" Width="94" />
+                <TextBox Height="103" HorizontalAlignment="Left" Margin="100,81,0,0" Name="txtDescription" VerticalAlignment="Top" Width="571" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" />
+                <Label Content="Reviewee's Comments :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="3,265,0,0" Name="label8" VerticalAlignment="Top" Width="143" />
+                <TextBox AcceptsReturn="True" Height="103" HorizontalAlignment="Left" Margin="147,190,0,0" Name="txtRevieweeComments" TextWrapping="Wrap" VerticalAlignment="Top" VerticalScrollBarVisibility="Visible" Width="524" />
+                <Label Content="Reviewer's Comments :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="False" Margin="6,375,0,0" Name="label9" VerticalAlignment="Top" Width="140" />
+                <TextBox AcceptsReturn="True" Height="103" HorizontalAlignment="Left" Margin="147,300,0,0" Name="txtReviewerComments" TextWrapping="Wrap" VerticalAlignment="Top" VerticalScrollBarVisibility="Visible" Width="524" />
+                <Button Content="Ok" Height="23" HorizontalAlignment="Left" Margin="596,409,0,0" Name="btnOk" VerticalAlignment="Top" Width="75" Click="btnOk_Click" />
+                <StatusBar Height="23" HorizontalAlignment="Left" Margin="-3,445,0,0" Name="statusBar" VerticalAlignment="Top" Width="709">
+                    <TextBlock Name="stsProject"></TextBlock>
+                    <Separator/>
+                    <TextBlock Name="stsFile"></TextBlock>
+                    <Separator/>
+                    <TextBlock Name="stsLine"></TextBlock>
+                </StatusBar>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
